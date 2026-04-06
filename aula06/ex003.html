@@ -12,18 +12,19 @@
         }
 
         h1 {
-            color: rgba(255, 166, 0, 0.8);
+            color: rgba(255, 166, 0, 0.8); 
         }
     </style>
 </head>
 <body>
-    <h1>Olá, mundo!</h1>
+    <h1>Olá, mundo!</h1> 
     <p>já me livrei da maldição</p>
 
-    <script>
-        window.alert('Minha primeira mensagem'); // mensagem na tela
-        window.confirm('Está gostando de JS?'); // janela com botão ok e cancelar
-        window.prompt('Qual é seu nome?'); // vai perguntar o nome....
+    <script> 
+       var n1 = Number(window.prompt('Digite um número: ')) // string
+       var n2 = Number(window.prompt('Digite outro número: ')) // string
+       var s = n1 + n2 
+       window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`) // sinal de (+) corresponde adição e concatenação
     </script>
 </body>
 </html>
