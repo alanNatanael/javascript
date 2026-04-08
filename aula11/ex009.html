@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivendo em qual país</title>
+</head>
+<body>
+    <h1>Qual país você mora?</h1>
+    <label for="country">Mora aonde?</label>
+    <input type="text" name="country" id="country">
+    <input type="button" value="Verificar" onclick="consultar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function consultar() {
+            var país = window.document.getElementById('country').value
+            var res = window.document.getElementById('res')
+            var nacionalidade = ''
+            if (país.toUpperCase() == 'BRASIL') {
+                nacionalidade = 'Brasileiro(a)!'
+            }else {
+                nacionalidade = 'Estrangeiro(a)!'
+            }
+            res.innerHTML = `<p>Vivendo no(a) <strong>${país}</strong>, você é <strong>${nacionalidade}</strong></p>`
+        }    
+    </script>
+</body>
+</html>
