@@ -1,30 +1,28 @@
 function contar() {
-    var inicio = window.document.getElementById('in')
-    var fim = window.document.getElementById('fn')
-    var passo = window.document.getElementById('pn')
-    var resultado = window.document.getElementById('res')
+    let ini = document.getElementById('txti')
+    let fim = document.getElementById('txtf')
+    let passo = document.getElementById('txtp')
+    let resultado = document.getElementById('res')
 
-    if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
-        resultado.innerHTML = '[ERRO] Informe os dados corretamente!'
-        window.alert('[ERRO] Informe os dados corretamente!')
+    if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+        window.alert('[ERRO] Falta dados!')
     } else {
-        resultado.innerHTML = 'Contando: <br>'
-        var i = Number(inicio.value)
-        var f = Number(fim.value)
-        var p = Number(passo.value)
-        if (p == 0) {
-            alert('Passo inválido! Considerando passo = 1')
-            p = 1
-        }
+        res.innerHTML = 'Contando: '
+        let i = Number(ini.value)
+        let f = Number(fim.value)
+        let p = Number(passo.value)
         if (i < f) {
-            for (i; i <= f; i += p) {
-                resultado.innerHTML += i + " 👉 "
+            // Contagem crescente
+            for(let c = i; c <= f; c += p) {
+               res.innerHTML += `${c} \u{1F449} ` 
             }
         } else {
-            for (i; i >= f; i -= p) {
-                resultado.innerHTML += i + " 👉 "
+            // Contagem regressiva
+            for(let c = i; c >= f; c -= p) {
+                res.innerHTML += `${c} \u{1F449} `
             }
         }
-        resultado.innerHTML += " 🏁 "
+        res.innerHTML += `\u{1F3C1}`
     }
+    
 }    
